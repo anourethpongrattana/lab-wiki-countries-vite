@@ -8,7 +8,7 @@ function HomePage() {
   const countriesAPI = "https://ih-countries-api.herokuapp.com/countries";
 
   async function fetchCountries() {
-    // With fetch
+    // With fetch we have to await data
     // try {
     //   const response = await fetch(countriesAPI);
     //   const data = await response.json();
@@ -17,7 +17,7 @@ function HomePage() {
     //   console.log(error);
     // }
 
-    // With axios
+    // With axios, we don't have to await anything, because it return a promise
     axios
       .get(`${countriesAPI}`)
       .then((response) => {
